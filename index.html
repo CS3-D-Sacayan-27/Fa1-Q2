@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #first-link {
+            color: blue;
+            text-decoration: none;
+            margin-right: 20px; 
+        }
+
+        #first-link:hover {
+            color: blue;
+            background-color: #eee;
+        }
+
+    
+        #first-link:active {
+            color: white;
+            background-color: blue;
+        }
+
+      
+        #first-link:visited {
+            color: red;
+        }
+
+      
+        #second-link {
+            color: green;
+            text-decoration: none;
+        }
+
+       
+        #second-link:hover {
+            color: white;
+            background-color: yellow;
+        }
+
+    
+        #second-link:active {
+            color: black;
+            border: 10px dotted green;
+        }
+
+
+        #second-link:visited {
+            color: darkgreen;
+        }
+
+
+        .box {
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid #ccc;
+            float: left;
+        }
+
+        
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="first-link" onclick="changeDiv1Style()">First Link</a>
+    <a href="#" id="second-link" onclick="changeDiv2Style()">Second Link</a><br>
+    <div class="box" id="div1">This is the first div</div>
+    <div class="clear"></div> 
+    <div class="box" id="div2">This is the second div</div>
+
+    <script>
+        function changeDiv1Style() {
+            document.getElementById('div2').style.border = '2px solid #ccc';
+
+            document.getElementById('div1').style.backgroundColor = 'lightblue';
+            document.getElementById('div1').style.color = 'darkred';
+        }
+
+        function changeDiv2Style() {
+            document.getElementById('div1').style.backgroundColor = '';
+            document.getElementById('div1').style.color = '';
+
+            document.getElementById('div2').style.border = '10px dotted green';
+        }
+    </script>
+</body>
+</html>
+
